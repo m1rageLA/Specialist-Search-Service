@@ -19,9 +19,17 @@ const headerColor = {
   backgroundColor: "#0c3d4a",
 };
 
-function ResponsiveAppBar({ pages }) {
+function ResponsiveAppBar() {
+
+  let liElements = [
+    { name: "Main", linkTo: "" },
+    { name: "Sign up", linkTo: "SignUp" },
+    { name: "Log In", linkTo: "logIn" },
+];
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [isLogin, setisLogin] = React.useState(false); //Проверка не регестрацию
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -89,58 +97,70 @@ function ResponsiveAppBar({ pages }) {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {liElements.map((item) => (
+                <MenuItem key={item.name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{item.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <NavLink to={`/${page}`} style={{textDecoration: "none"}}>
+            
+            {liElements.map((item) => (
+              <NavLink to={`/${item.linkTo}`} style={{ textDecoration: "none" }}>
                 <Button
-                  key={page}
+                  key={"item.linkTo"}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  {page}
+                  {item.name}
                 </Button>
               </NavLink>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              ``
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          {isLogin ? (
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              </Tooltip>
+
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          ) : (
+            <div>
+              <NavLink to={"/logIn"}>
+                <Button variant="contained">Log In</Button>
+              </NavLink>
+              <NavLink to={"/"}>
+                <Button variant="contained">Sign up</Button>
+              </NavLink>
+            </div>
+          )}
         </Toolbar>
       </Container>
     </AppBar>
