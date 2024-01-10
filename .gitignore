@@ -1,0 +1,6 @@
+# Игнорировать каталоги с зависимостями
+front/node_modules/
+back/node_modules/
+
+# Игнорировать файлы .env
+back/.env
