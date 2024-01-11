@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# **Basic project information**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description:
+My project has the idea of finding a common sphere of interests with other people and subsequently developing it.
+On this website, you will be able to both find a team for collaborative development of a certain task and create this team yourself.
+The platform plans to provide opportunities not only for finding specialists but also for various other features:
+1. Internal communication
+2. Creating your own profile
+3. ?
+4. ?
+Initially, the project is considered as a training ground for learning React and gaining knowledge of the basics of the backend.
 
-## Available Scripts
+## **Technologies:** 
+(Frontend)
+- React
+- Material UI
+- Scss
 
-In the project directory, you can run:
+(Backend)
+- Node.js
+- Express.js
+- MySQL
+- Sequelize
+- JSON Web Token
+- bcrypt
 
-### `npm start`
+## **Installation:**
+To install, you will need to clone the repository and use a package manager to install any library from the project separately in the frontend and backend folders, for example:
+*path\frontend>* `npm install react-router-dom`
+*path\backend>* `npm install express`
+After such manipulations, the package manager will automatically install everything necessary for the project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# **Configuration:**
+In the backend folder, there is a configuration file .env. For security reasons, I haven't added this file to the repository, but you can obviously create it yourself.
+-In the backend folder, create a file .env with the following variables:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`JWT_SECRET="unique key for JSON WEB TOKEN"`
+`PORT=3001 (will soon have a flexible value, currently listens only to 3001)`
 
-### `npm test`
+# **Project Launch:**
+To launch the project, you need to have Node downloaded on your computer. If so, separately start on two consoles:
+In the frontend folder: `npm start`
+In the backend folder: `node server/server.js`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Why is the path in the backend folder specifically server/server.js?
+This is necessary for the configuration file (.env) to be read, so it has to be like that :)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# **Contacts:**
+miragela.code@gmail.com
+or
+rozhkovskyi2022@ukr.net
