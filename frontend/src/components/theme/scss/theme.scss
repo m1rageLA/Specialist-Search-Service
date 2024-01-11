@@ -1,0 +1,30 @@
+$primary-color: rgb(255, 255, 255) !important;
+$secondary-color: rgb(240, 240, 240) !important;
+$items-color: rgb(0, 0, 0);
+$liItems-color: rgb(46, 46, 46);
+$items-color__hover: rgb(21, 255, 0);
+$textField-color: rgb(239, 239, 239);
+
+body {
+  background-color: $primary-color;
+}
+
+.MuiAppBar-root {
+  background-color: $secondary-color;
+}
+
+.MuiTypography-root {
+  color: $items-color;
+}
+
+.MuiButton-root {
+  color: $liItems-color !important;
+
+  &:hover {
+    color: $items-color__hover;
+  }
+}
+
+.MuiTextField-root {
+  background-color: $textField-color;
+}

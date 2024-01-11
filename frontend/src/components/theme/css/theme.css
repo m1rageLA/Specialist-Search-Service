@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.MuiAppBar-root {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.MuiTypography-root {
+  color: rgb(0, 0, 0);
+}
+
+.MuiButton-root {
+  color: rgb(46, 46, 46) !important;
+}
+.MuiButton-root:hover {
+  color: rgb(21, 255, 0);
+}
+
+.MuiTextField-root {
+  background-color: rgb(239, 239, 239);
+}
