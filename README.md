@@ -8,6 +8,7 @@ The platform plans to provide opportunities not only for finding specialists but
 2. Creating your own profile
 3. ?
 4. ?
+
 Initially, the project is considered as a training ground for learning React and gaining knowledge of the basics of the backend.
 
 ## **Technologies:** 
@@ -26,8 +27,11 @@ Initially, the project is considered as a training ground for learning React and
 
 ## **Installation:**
 To install, you will need to clone the repository and use a package manager to install any library from the project separately in the frontend and backend folders, for example:
+
 *path\frontend>* `npm install react-router-dom`
+
 *path\backend>* `npm install express`
+
 After such manipulations, the package manager will automatically install everything necessary for the project.
 
 # **Configuration:**
@@ -35,6 +39,7 @@ In the backend folder, there is a configuration file .env. For security reasons,
 -In the backend folder, create a file .env with the following variables:
 
 `JWT_SECRET="unique key for JSON WEB TOKEN"`
+
 `PORT=3001 (will soon have a flexible value, currently listens only to 3001)`
 
 # **Project Launch:**
