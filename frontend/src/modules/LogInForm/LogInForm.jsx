@@ -3,13 +3,15 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useNavigate } from 'react-router-dom';
+import Container from "@mui/material/Container";
+import { useNavigate } from "react-router-dom";
+import "../../components/theme/css/theme.css";
+import logInApi from "./api/logInApi";
 
-import "../theme/css/theme.css";
 const theme = createTheme();
 
-const LogIn = () => {
-  const navigate = useNavigate(); 
+const LogInForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -20,36 +22,27 @@ const LogIn = () => {
   };
 
   const handleLogin = async () => {
+    const { success, token, error } = await logInApi(formData);
 
-    try {
-      const response = await fetch("http://localhost:3001/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem("token", data.token);
-        
-        console.log("Авторизация успешна", data.token);
-        navigate("/Main");
-      } else {
-        const data = await response.json();
-        console.error(data.error);
-      }
-    } catch (error) {
-      console.error("Ошибка при выполнении запроса на авторизацию", error);
+    if (success) {
+      localStorage.setItem("token", token);
+      console.log(`Login successsful, your token is \n${token}`);
+      navigate("/Main");
+    } else {
+      console.error(error);
     }
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <div
-        style={{
+      <Container
+        maxWidth="sm"
+        sx={{
           height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Box
@@ -57,13 +50,6 @@ const LogIn = () => {
           onSubmit={(e) => {
             e.preventDefault();
             handleLogin();
-          }}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
           }}
           noValidate
           autoComplete="off"
@@ -107,9 +93,9 @@ const LogIn = () => {
             Log In
           </Button>
         </Box>
-      </div>
+      </Container>
     </ThemeProvider>
   );
 };
 
-export default LogIn;
+export default LogInForm;

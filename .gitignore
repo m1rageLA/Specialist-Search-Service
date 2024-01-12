@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -31,4 +28,5 @@ backend/package-lock.json
 
 # Игнорировать файлы .env
 backend/.env
->>>>>>> 4648fc0 (Create: (new structure) (logIn/signUp) (tokens) ...)
+frontend/.env
+

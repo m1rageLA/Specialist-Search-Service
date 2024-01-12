@@ -18,9 +18,9 @@ const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 let liElements = [
-  { name: "Products", linkTo: "" },
-  { name: "Sign up", linkTo: "SignUp" },
-  { name: "Log In", linkTo: "LogIn" },
+  { name: "Products", linkTo: "/" },
+  { name: "Sign up", linkTo: "/SignUp" },
+  { name: "Log In", linkTo: "/LogIn" },
 ];
 
 const theme = createTheme();

@@ -1,0 +1,1 @@
+export { default as RegestrationForm } from "./RegestrationForm";

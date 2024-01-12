@@ -8,5 +8,8 @@
     "mysql2": "^3.6.5",
     "sequelize": "^6.35.2",
     "sequelize-cli": "^6.6.2"
+  },
+  "scripts": {
+    "backend": "node server/server.js"
   }
 }

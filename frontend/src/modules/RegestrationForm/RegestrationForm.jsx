@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import regestrationApi from "./api/regestrationApi";
 
-const SignUp = () => {
+const RegestrationForm = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -14,26 +15,16 @@ const SignUp = () => {
   };
 
   const handleRegistration = async (e) => {
-    e.preventDefault();
+    const { success, data, error } = await regestrationApi(e, formData);
 
-    try {
-      const response = await fetch("http://localhost:3001/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
+    if (success) {
       console.log(data);
-      // Обработка успешной регистрации, например, перенаправление на страницу входа
-    } catch (error) {
-      console.error("Ошибка при регистрации:", error);
-      // Обработка ошибки, например, вывод сообщения об ошибке на экран
+    } 
+    else {
+      console.error(error);
+      console.log("0------");
     }
   };
-
   return (
     <div
       style={{
@@ -110,4 +101,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default RegestrationForm;
