@@ -26,10 +26,10 @@ let liElements = [
 const theme = createTheme();
 
 function Header() {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   // eslint-disable-next-line no-unused-vars
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };

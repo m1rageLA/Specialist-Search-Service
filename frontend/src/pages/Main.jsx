@@ -1,46 +1,14 @@
-import React, { useEffect } from "react";
-import { jwtDecode } from "jwt-decode";
+import React from "react";
+import CheckToken from "../modules/CheckToken/CheckToken";
+import Header from "../components/common/Header";
+import MainContent from "../components/MainContent";
 
 const Main = () => {
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      try {
-        const decodedToken = jwtDecode(token);
-        const end = new Date(decodedToken.exp * 1000);
-        const start = new Date(decodedToken.iat * 1000);
-
-        console.log("Token expires at (exp):", end.toUTCString());
-        console.log("Token created in (iat):", start.toUTCString());
-        // Делайте что-то с расшифрованными данными
-      } catch (error) {
-        console.error("Error decoding token:", error);
-      }
-    } else {
-      console.error("Токен отсутствует.");
-    }
-  }, []);
-
   return (
-<div>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  <button>123</button>
-  
-  </div>
-
-    
+    <CheckToken>
+      <Header />
+      <MainContent />
+    </CheckToken>
   );
 };
 

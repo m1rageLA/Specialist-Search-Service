@@ -63,7 +63,7 @@ app.post("/api/login", async (req, res) => {
         }
 
         // Если пароль совпадает, отправляем успешный ответ и токен
-        const token = jwt.sign({ userId: user.id }, SECRETKEY, {expiresIn: '7d'} );
+        const token = jwt.sign({ userId: user.id, username: user.username }, SECRETKEY, {expiresIn: '1m'} );
         return res.status(200).json({ message: "Авторизация успешна", token });
 
     } catch (err) {
