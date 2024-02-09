@@ -1,5 +1,56 @@
 body {
   margin: 0;
   padding: 0;
+  height: 12vh;
+}
+
+.text-field_verefication {
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.text-field_verefication .MuiFilledInput-root {
+  background-color: transparent;
+}
+.text-field_verefication .MuiInputBase-root {
+  color: white;
+}
+
+.log-in-form-container {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.log-in-form-container .form-box {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background-color: "red";
+}
+.log-in-form-container .form-heading {
+  text-align: center;
+  font-size: 24px;
+}
+.log-in-form-container .text-field-email {
+  width: 300px;
+  margin-bottom: 20px;
+  background-color: "red";
+}
+.log-in-form-container .text-field-password {
+  width: 300px;
+  margin-bottom: 20px;
+  background-color: "Red";
+}
+.log-in-form-container .login-button {
+  width: 300px;
 }

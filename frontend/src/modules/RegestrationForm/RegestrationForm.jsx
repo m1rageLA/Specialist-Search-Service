@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import regestrationApi from "./api/regestrationApi";
+import theme from "../../assets/theme";
+import { Box, Container, Typography } from "@mui/material";
 
 const RegestrationForm = () => {
   const [formData, setFormData] = useState({
@@ -19,36 +21,51 @@ const RegestrationForm = () => {
 
     if (success) {
       console.log(data);
-    } 
-    else {
+    } else {
       console.error(error);
       console.log("0------");
     }
   };
   return (
-    <div
-      style={{
+    <Container
+      maxWidth="sm"
+      sx={{
         height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <form
-        onSubmit={handleRegistration}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
+      <Box
+        sx={(theme) => ({
+          ...theme.box.variant1,
+        })}
+        component="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleRegistration();
         }}
         noValidate
         autoComplete="off"
       >
         <div>
-          <TextField
+          <Typography
             sx={{
-              width: "300px",
-              marginBottom: "10px",
+              textAlign: "center",
+              margin: "0 0 40px 0",
             }}
+            variant="h5"
+            color="color"
+          >
+            Sign Up
+          </Typography>
+        </div>
+        <div>
+          <TextField
+            sx={(theme) => ({
+              ...theme.textField.variant1,
+            })}
             id="filled-basic"
             label="user name"
             variant="filled"
@@ -59,10 +76,9 @@ const RegestrationForm = () => {
         </div>
         <div>
           <TextField
-            sx={{
-              width: "300px",
-              marginBottom: "10px",
-            }}
+            sx={(theme) => ({
+              ...theme.textField.variant1,
+            })}
             id="filled-basic"
             label="e-mail"
             variant="filled"
@@ -74,10 +90,9 @@ const RegestrationForm = () => {
 
         <div>
           <TextField
-            sx={{
-              width: "300px",
-              marginBottom: "20px",
-            }}
+            sx={(theme) => ({
+              ...theme.textField.variant1,
+            })}
             id="filled-basic"
             label="password"
             variant="filled"
@@ -88,16 +103,17 @@ const RegestrationForm = () => {
           />
         </div>
         <Button
-          sx={{
+          sx={(theme) => ({
+            ...theme.button.variant1,
             width: "300px",
-          }}
+          })}
           variant="contained"
           type="submit"
         >
           Sign Up
         </Button>
-      </form>
-    </div>
+      </Box>
+    </Container>
   );
 };
 

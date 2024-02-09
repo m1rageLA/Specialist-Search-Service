@@ -1,5 +1,55 @@
+$form-container-color: "red";
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 12vh;
+}
+
+.text-field_verefication {
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  
+    .MuiFilledInput-root {
+      background-color: transparent; // установите цвет фона
+    }
+  
+    .MuiInputBase-root {
+      color: white; // установите цвет текста
+    }
+}
+
+.log-in-form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .form-box {
+    padding: 40px 30px;
+    border-radius: 20px;
+    background-color: "red"; // Замените на соответствующее значение из вашего темы
+  }
+
+  .form-heading {
+    text-align: center;
+    font-size: 24px; // Измените размер шрифта по вашему усмотрению
+  }
+
+  .text-field-email {
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: "red"; // Замените на соответствующее значение из вашего темы
+  }
+
+  .text-field-password {
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: "Red"; // Замените на соответствующее значение из вашего темы
+  }
+
+  .login-button {
+    width: 300px;
+  }
 }

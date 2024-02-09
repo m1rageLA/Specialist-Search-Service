@@ -1,14 +1,18 @@
 import React from "react";
-import CheckToken from "../modules/CheckToken/CheckToken";
 import Header from "../components/common/Header";
-import MainContent from "../components/MainContent";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../assets/theme";
+import { Box } from "@mui/material";
+import HomeContent from "../components/HomeContent";
 
 const Main = () => {
   return (
-    <CheckToken>
-      <Header />
-      <MainContent />
-    </CheckToken>
+    <ThemeProvider theme={theme}>
+      <Box sx={{...theme.box.variant_container}}>
+          <Header />
+          <HomeContent />
+      </Box>
+    </ThemeProvider>
   );
 };
 

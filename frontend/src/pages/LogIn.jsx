@@ -1,19 +1,18 @@
 import React from "react";
 import Header from "../components/common/Header";
 import LogInForm from "../modules/LogInForm/LogInForm";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../assets/theme";
+import { Box } from "@mui/material";
 
 const LogIn = () => {
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <Header />
-      <LogInForm style={{ flex: 1 }} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box sx={{...theme.box.variant_container}}>
+        <Header />
+        <LogInForm style={{ flex: 1 }} />
+      </Box>
+    </ThemeProvider>
   );
 };
 
