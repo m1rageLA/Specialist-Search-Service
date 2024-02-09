@@ -62,7 +62,12 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            <NavLink style={{textDecoration: "none", color: theme.palette.logo}}>LOGO</NavLink>
+            <NavLink
+              to="/"
+              style={{ textDecoration: "none", color: theme.palette.logo }}
+            >
+              LOGO
+            </NavLink>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -122,7 +127,7 @@ function Header() {
               sx={(theme) => ({
                 ...theme.button.variant1,
                 width: "100px",
-                margin: "0 5px"
+                margin: "0 5px",
               })}
               variant="contained"
               color="button"
@@ -135,7 +140,7 @@ function Header() {
               sx={(theme) => ({
                 ...theme.button.variant1,
                 width: "100px",
-                margin: "0 5px"
+                margin: "0 5px",
               })}
               variant="contained"
               color="button"

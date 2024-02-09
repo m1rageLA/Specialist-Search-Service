@@ -20,7 +20,6 @@ const Home = () => {
         <CheckToken>
           <Header />
           <HomeContent />
-          HOME HOME HOME HOME
         </CheckToken>
       </Box>
     </ThemeProvider>

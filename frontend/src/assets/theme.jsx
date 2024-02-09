@@ -3,9 +3,13 @@ import { createTheme } from "@mui/material/styles";
 const primary = "#2B2B2E";    // Gray 1
 const secondary = "#212124";  // Gray 2
 const tertiary = "#38383D";   // Gray 3
-const items = "#C2C2C2";      // White 1
-const logo = "#fcfcfc";     // Green 1
+const items = "#C2C2C2";      // Gray 4
+const itemsLight = "#ededed"; // Gray 5
+const logo = "#fcfcfc";       // White
 const button = "#00BF7A";     // Green 1
+const particle1 = "#00BF7A"   //Green light
+const particle2 = "#00A56A"   //Green medium
+const particle3 = "#008455";  //Green dark
 
 const theme = createTheme({
   palette: {
@@ -21,10 +25,12 @@ const theme = createTheme({
     items: {
       main: items,
     },
-    button: {
-      main: button,
-    },
+    button: button,
     logo: logo,
+    itemsLight: itemsLight,
+    particle1: particle1,
+    particle2: particle2,
+    particle3: particle3,
   },
   typography: {
     h6: {

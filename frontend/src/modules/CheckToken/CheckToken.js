@@ -19,7 +19,8 @@ const CheckToken = ({ children }) => {
                     setIsAuthenticated(true);
                 }
                 else {
-                    navigate("/LogIn");
+                    //navigate("/LogIn");
+                    setIsAuthenticated(true);
                 }
 
             } catch (error) {
