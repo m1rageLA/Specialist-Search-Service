@@ -8,10 +8,17 @@ import { Box } from "@mui/material";
 const LogIn = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{...theme.box.variant_container}}>
+            <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: theme.palette.primary.main,
+        }}
+      >
         <Header />
         <LogInForm style={{ flex: 1 }} />
-      </Box>
+      </div>
     </ThemeProvider>
   );
 };

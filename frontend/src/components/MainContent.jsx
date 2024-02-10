@@ -3,6 +3,7 @@ import React from "react";
 import logoImg from "../assets/images/logo.png";
 import TextImageV1 from "./blocks/TextImageV1";
 import ImageTextV1 from "./blocks/ImageTextV1";
+import ExampleCard from "./blocks/ExampleCard";
 
 const MainContent = () => {
   return (
@@ -31,6 +32,13 @@ const MainContent = () => {
          consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
         `}
         alt={"logo"}
+      />
+      <ExampleCard
+        header={`Example of card`}
+        title={`Developers Community:`}
+        text={`
+          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+          massa mi. Aliquam in hendrerit urna.`}
       />
       <br></br>
       <br></br>

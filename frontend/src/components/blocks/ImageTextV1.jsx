@@ -7,8 +7,6 @@ export default function ImageTextV1({ ...props }) {
   return (
     <Box width={"100%"} marginTop={12} display={"flex"}>
       <Box width={"100%"} display={"flex"}>
-
-
         {/*--- LEFT PART ---*/}
         <Box
           width={"55%"}
@@ -16,7 +14,7 @@ export default function ImageTextV1({ ...props }) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            margin: "0 50px 0 0"
+            margin: "0 50px 0 0",
           }}
         >
           <Typography
@@ -30,7 +28,6 @@ export default function ImageTextV1({ ...props }) {
             {props.secondText}
           </Typography>
         </Box>
-
 
         {/*--- RIGHT PART ---*/}
         <Box
@@ -51,13 +48,12 @@ export default function ImageTextV1({ ...props }) {
             <Typography color={theme.palette.items.main}>
               {props.text}
             </Typography>
-            <Particle color={theme.palette.particle1} />
-            <Particle color={theme.palette.particle2} />
-            <Particle color={theme.palette.particle3} />
+            <Box sx={{width: "100%", textAlign: "end"}}>
+              <Particle color={theme.palette.particle1} />
+              <Particle color={theme.palette.particle2} />
+            </Box>
           </Box>
         </Box>
-
-
       </Box>
     </Box>
   );

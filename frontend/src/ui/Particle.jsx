@@ -7,7 +7,7 @@ export default function Particle({ color }) {
       sx={{
         backgroundColor: color,
         display: "inline-block",
-        margin: "12px 3px 0",
+        margin: "15px 3px 0",
         width: "14px",
         height: "14px",
         borderRadius: "50px",
