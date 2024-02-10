@@ -50,7 +50,7 @@ const theme = createTheme({
       boxShadow: "0 0 5px rgba(0,0,0,0.2)",
     },
     variant_container: {
-      height: "100vh",
+      height: "100%",
       display: "flex",
       flexDirection: "column",
       backgroundColor: primary,
