@@ -12,7 +12,7 @@ const Regestration = () => {
           height: "100vh",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primaryBackground,
         }}
       >
         <Header />

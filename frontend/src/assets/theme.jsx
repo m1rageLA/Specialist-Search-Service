@@ -1,8 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 
-const primary = "#2B2B2E";    // Gray 1
+const primary = "#e3e3e3";    // Gray 1
 const secondary = "#212124";  // Gray 2
-const tertiary = "#38383D";   // Gray 3
+const tertiary = "#404045";   // Gray 3
 const items = "#C2C2C2";      // Gray 4
 const itemsLight = "#ededed"; // Gray 5
 const logo = "#fcfcfc";       // White
@@ -10,6 +10,7 @@ const button = "#00BF7A";     // Green 1
 const particle1 = "#00BF7A"   //Green light
 const particle2 = "#00A56A"   //Green medium
 const particle3 = "#008455";  //Green dark
+const primaryBackground = "#2B2B2E"
 
 const theme = createTheme({
   palette: {
@@ -19,9 +20,7 @@ const theme = createTheme({
     secondary: {
       main: secondary,
     },
-    tertiary: {
-      main: tertiary,
-    },
+
     items: {
       main: items,
     },
@@ -31,6 +30,8 @@ const theme = createTheme({
     particle1: particle1,
     particle2: particle2,
     particle3: particle3,
+    primaryBackground: primaryBackground,
+    tertiary: tertiary,
   },
   typography: {
     h6: {
@@ -46,14 +47,14 @@ const theme = createTheme({
     variant1: {
       padding: "45px 30px",
       borderRadius: "18px",
-      backgroundColor: "#2f2f33",
+      backgroundColor: "#333337",
       boxShadow: "0 0 5px rgba(0,0,0,0.2)",
     },
     variant_container: {
       height: "100%",
       display: "flex",
       flexDirection: "column",
-      backgroundColor: primary,
+      backgroundColor: primaryBackground,
     },
   },
 

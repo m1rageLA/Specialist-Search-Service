@@ -30,20 +30,6 @@ export default function ExampleCard({ ...props }) {
             mediumSkills={["Js"]}
             easySkills={["SQL"]}
           ></Card>
-          {/* <Box sx={{ backgroundColor: theme.box.variant1, height: "200px" }}>
-            <Typography
-              sx={{ marginBottom: "15px" }}
-              color={theme.palette.itemsLight}
-            >
-              {props.title}
-            </Typography>
-            <Typography color={theme.palette.items.main}>{props.text}</Typography>
-            <Box sx={{width: "100%", textAlign: "end"}}>
-              <Particle color={theme.palette.particle1} />
-              <Particle color={theme.palette.particle2} />
-              <Particle color={theme.palette.particle3} />
-            </Box>
-          </Box> */}
         </Box>
       </Box>
     </Box>
