@@ -1,14 +1,16 @@
 import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import logoImg from "../assets/images/logo.png";
-import TextImageV1 from "./blocks/TextImageV1";
 import ImageTextV1 from "./blocks/ImageTextV1";
 import ExampleCard from "./blocks/ExampleCard";
+import ContentBlockV1 from "./blocks/ContentBlockV1";
+import ContentBlockV2 from "./blocks/ContentBlockV2";
+import ContentBlockV3 from "./blocks/ContentVlockV3";
 
 const MainContent = () => {
   return (
     <Container maxWidth="md">
-      <TextImageV1
+      <ContentBlockV1
         preHeader={`Developers Community:`}
         header={`Developers Community:`}
         title={`Developers Community:`}
@@ -25,7 +27,7 @@ const MainContent = () => {
         title={`Developers Community:`}
         text={`
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
-          massa mi. Aliquam in hendrerit urna. Pellentesque sit amet 
+          massa mi.dsadsdsaadsdsadsadsaaaaaaaaaaaaaa Aliquam in hendrerit urna. Pellentesque sit amet 
           sapien fringilla, mattis ligula`}
         secondText={`Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
          Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula 
@@ -40,6 +42,16 @@ const MainContent = () => {
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
           massa mi. Aliquam in hendrerit urna.`}
       />
+      <ContentBlockV2
+        title={`Team`}
+        text={`
+        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+         Aliquam in hendrerit urna. Pellentesque sit
+        `}
+        img={logoImg}
+        alt={"logo"}
+      />
+
       <br></br>
       <br></br>
       <br></br>

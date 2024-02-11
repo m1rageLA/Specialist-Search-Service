@@ -1,17 +1,17 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-export default function AuthorImg({ img }) {
+export default function AuthorImg({ img, width }) {
   return (
     <Box
       sx={{
         backgroundColor: "red",
         margin: "0 -6px 0",
-        width: "45px",
-        height: "45px",
-        borderRadius: "50px",
+        width: {width},
+        height: {width},
+        borderRadius: "80px",
         overflow: "hidden",
-        float: "right",
+        float: "left",
       }}
     >
         <img

@@ -20,16 +20,18 @@ export default function Card({ ...props }) {
       }}
     >
       <Box gridColumn={"1"} sx={{ display: "flex", marginLeft: "10px" }}>
-        <div style={{ display: "flex", height: "50%" }}>
-          <AuthorImg img={person1}></AuthorImg>
-          <AuthorImg img={person2}></AuthorImg>
-          <AuthorImg img={person3}></AuthorImg>
+        <div style={{display: "flex", height: "50px"}}>
+          <AuthorImg width={"50px"} img={person1}></AuthorImg>
+          <AuthorImg width={"50px"} img={person2}></AuthorImg>
+          <AuthorImg width={"50px"} img={person3}></AuthorImg>
           <Typography
             sx={{
+              display: "inline-block",
               color: theme.palette.logo,
               alignSelf: "center",
               marginLeft: "8px",
               fontSize: "14px",
+              marginTop: "35px"
             }}
           >
             +2
