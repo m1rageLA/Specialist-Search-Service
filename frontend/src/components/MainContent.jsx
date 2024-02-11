@@ -5,7 +5,7 @@ import ImageTextV1 from "./blocks/ImageTextV1";
 import ExampleCard from "./blocks/ExampleCard";
 import ContentBlockV1 from "./blocks/ContentBlockV1";
 import ContentBlockV2 from "./blocks/ContentBlockV2";
-import ContentBlockV3 from "./blocks/ContentVlockV3";
+import ContentBlockV3 from "./blocks/ContentBlockV3";
 
 const MainContent = () => {
   return (
@@ -51,7 +51,15 @@ const MainContent = () => {
         img={logoImg}
         alt={"logo"}
       />
-
+      <ContentBlockV3
+        title={`Skill`}
+        text={`
+        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+         Aliquam in hendrerit urna. Pellentesque sit
+        `}
+        img={logoImg}
+        alt={"logo"}
+      />
       <br></br>
       <br></br>
       <br></br>
