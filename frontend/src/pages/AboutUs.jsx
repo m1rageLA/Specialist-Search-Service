@@ -3,6 +3,7 @@ import { Box } from '@mui/material'
 import React from 'react'
 import theme from '../assets/theme'
 import Header from '../components/common/Header'
+import Footer from '../components/common/Footer'
 
 export default function AboutUs() {
   return (
@@ -10,6 +11,7 @@ export default function AboutUs() {
         <Box sx={{...theme.box.variant_container}}>
             <Header />
             ABOUT US
+            <Footer />
         </Box>
     </ThemeProvider>
   )
