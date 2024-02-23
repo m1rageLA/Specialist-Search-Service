@@ -1,17 +1,17 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 const HomeContent = () => {
+  
   return (
-
-        <Container maxWidth="md" sx={{backgroundColor: "green"}}>
-          <Box sx={{backgroundColor: "red"}} my={10} width={600} height={320}>
-            d
-          </Box>
-        </Container>
-
+  <Container maxWidth="md">
+    <Box mt={12}>
+      <Typography>About Us</Typography>
+      <Typography>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.
+      </Typography>
+    </Box>
+  </Container>
   );
 };
 

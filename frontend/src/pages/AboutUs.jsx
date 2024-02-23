@@ -4,13 +4,14 @@ import React from 'react'
 import theme from '../assets/theme'
 import Header from '../components/common/Header'
 import Footer from '../components/common/Footer'
+import AboutContent from '../components/AboutContent'
 
 export default function AboutUs() {
   return (
     <ThemeProvider theme={theme}>
         <Box sx={{...theme.box.variant_container}}>
             <Header />
-            ABOUT US
+            <AboutContent />
             <Footer />
         </Box>
     </ThemeProvider>

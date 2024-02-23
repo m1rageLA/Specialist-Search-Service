@@ -6,6 +6,7 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "../assets/theme";
 import { Box } from "@mui/material";
 import CheckToken from "../modules/CheckToken/CheckToken";
+import Footer from "../components/common/Footer"
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <CheckToken>
           <Header />
           <HomeContent />
+          <Footer />
         </CheckToken>
       </Box>
     </ThemeProvider>
