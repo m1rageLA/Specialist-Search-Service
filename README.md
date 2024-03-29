@@ -26,11 +26,11 @@ Initially, the project is considered as a training ground for learning React and
 - bcrypt
 
 ## **Installation:**
-To install, you will need to clone the repository and use a package manager to install any library from the project separately in the frontend and backend folders, for example:
+To install, you will need to clone the repository and use a package manager to install all the necessary libraries from the project separately in the frontend and backend folders, for example:
 
-*path\frontend>* `npm install react-router-dom`
+*path\frontend>* `npm i`
 
-*path\backend>* `npm install express`
+*path\backend>* `npm i`
 
 After such manipulations, the package manager will automatically install everything necessary for the project.
 
