@@ -11,19 +11,9 @@ The platform plans to provide opportunities not only for finding specialists but
 
 Initially, the project is considered as a training ground for learning React and gaining knowledge of the basics of the backend.
 
-## **Technologies:** 
-(Frontend)
-- React
-- Material UI
-- Scss
+## Primary technologies
 
-(Backend)
-- Node.js
-- Express.js
-- MySQL
-- Sequelize
-- JSON Web Token
-- bcrypt
+[![My Skills](https://skillicons.dev/icons?i=js,react,express,scss,mui,mysql,sequelize)](https://skillicons.dev)
 
 ## **Installation:**
 To install, you will need to clone the repository and use a package manager to install all the necessary libraries from the project separately in the frontend and backend folders, for example:
